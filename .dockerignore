@@ -1,0 +1,7 @@
+bot_sessions
+node_modules
+key.json
+bot_*
+.env
+*.log
+*.png
