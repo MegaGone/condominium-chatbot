@@ -56,7 +56,10 @@ const flowPedido = bot
     }
   )
   .addAnswer(
-    "Perfecto! pronto nos estaremos contactando contigo",
+    `Perfecto! Pronto nos estaremos contactando contigo. Puedes obtener más información
+    ingresando al siguiente link:
+    ${CONSOLE_URL}
+    `,
     null,
     async (ctx, { state }) => {
       const currentState = state.getMyState();

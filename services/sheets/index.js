@@ -53,18 +53,22 @@ class GoogleSheetService {
    * @param {*} data
    */
   saveOrder = async (data = {}) => {
-    await this.doc.loadInfo();
-    const sheet = this.doc.sheetsByIndex[1];
+    try {
+      await this.doc.loadInfo();
+      const sheet = this.doc.sheetsByIndex[1];
 
-    const order = await sheet.addRow({
-      fecha: data.fecha,
-      nombre: data.nombre,
-      telefono: data.telefono,
-      casa: data.casa,
-      observaciones: data.obs
-    });
+      const order = await sheet.addRow({
+        fecha: data.fecha,
+        nombre: data.nombre,
+        telefono: data.telefono,
+        casa: data.casa,
+        observaciones: data.obs
+      });
 
-    return order
+      return order;
+    } catch (error) {
+      console.log("[ERROR][SAVE ORDER] ------------------->", error);
+    };
   };
 }
 
