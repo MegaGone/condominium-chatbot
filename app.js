@@ -58,7 +58,7 @@ const flowPedido = bot
   .addAnswer(
     `Perfecto! Pronto nos estaremos contactando contigo. Puedes obtener más información
     ingresando al siguiente link:
-    ${CONSOLE_URL}
+    http://143.198.110.118/auth/sign-in
     `,
     null,
     async (ctx, { state }) => {
